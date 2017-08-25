@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="\bootstrap\dist\css\bootstrap.css" rel="stylesheet">
+        <link href="base.css" rel="stylesheet">
+        <script src='jquery-3.2.1.min.js'></script>
+        <script src='app.js'></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="dbox">
+                <div class="dboxinner">
+                    <fieldset>
+                        <legend>
+                            Acesso
+                        </legend>                    
+                        <% if(isMessages){ %>
+                            <% for(var i=0; i<messages.length; i++) {%>
+                                <div class="alert alert-danger">
+                                    <%= messages[i] %>
+                                </div>               
+                            <% } %>
+                        <% } %>       
+                        <form action="/" id="form" method="post">
+                            <label for="username" /> Usuário </label>
+                            <input type="text" id="username" name="username" class='form-control' />
+                            <label for="password"> Password </label>
+                            <input type="password" id="password" name="password" class='form-control'/>
+                            <input type="submit" value="Enviar" class='btn btn-default'/>                
+                        </form>    
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        
+        <script src="\jquery-3.2.1.min.js"></script>
+        <script src="\bootstrap\dist\js\bootstrap.js"></script>
+    </body>
+</html>

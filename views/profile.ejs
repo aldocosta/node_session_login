@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="\bootstrap\dist\css\bootstrap.css" rel="stylesheet">
+        <link href="base.css" rel="stylesheet">
+    </head>
+    <body>        
+      <div class="container">
+        <div class="dbox">                
+            <div class="dboxinner">       
+                <table class="table table-striped">         
+                        <% if(user) {%>                    
+                        <label for="" class="badge">
+                                <%= user.email%>
+                        </label>                
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Roles
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i=0; i<= user.roles.length;i++) { %>              
+                                <tr>
+                                    <td>
+                                        <%=user.roles[i]%>
+                                    </<td>
+                                </tr>
+                                <% }%>
+                            </tbody>
+                        <% }%>            
+                </table>
+            </div>
+        </div>
+      </div>
+       <script src="\jquery-3.2.1.min.js"></script>
+        <script src="\bootstrap\dist\js\bootstrap.js"></script>
+    </body>
+</html>
